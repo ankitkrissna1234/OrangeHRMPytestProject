@@ -1,0 +1,8 @@
+pytest
+pytest -v -s
+pytest test_file_name.py -v -s
+pytest -k test_function name -v -s
+pytest -m marker_name -v -s
+pytest --html = report.html
+pytest --alluredir=allure_result
+pytest --last-failed 2 --reruns-delay 3 --html=report.html --self-contained-html

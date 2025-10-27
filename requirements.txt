@@ -1,0 +1,6 @@
+selenium>=4.8.0
+pytest>=7.0.0
+pytest-xdist
+allure-pytest
+pandas
+webdriver-manager

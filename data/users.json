@@ -1,0 +1,26 @@
+[
+  {
+    "id": "positive_admin",
+    "username": "Admin",
+    "password": "admin123",
+    "type": "positive"
+  },
+  {
+    "id": "negative_wrong_password",
+    "username": "Admin",
+    "password": "wrongpass",
+    "type": "negative"
+  },
+  {
+    "id": "negative_wrong_username",
+    "username": "wronguser",
+    "password": "admin123",
+    "type": "negative"
+  },
+  {
+    "id": "negative_empty_password",
+    "username": "Admin",
+    "password": "",
+    "type": "negative"
+  }
+]
