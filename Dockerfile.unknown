@@ -1,38 +1,14 @@
-# ===========================
+# Use official Python image as base
+FROM python:3.10-slim
 
-# Dockerfile for OrangeHRMProject
+# Set working directory inside container
+WORKDIR /app
 
-# ===========================
+# Copy all files from current folder to /app in container
+COPY . /app
 
-# Step 1: Use official lightweight Python image
-
-FROM python:3.13-slim
-
-# Step 2: Set working directory
-
-WORKDIR /orangehrmpytestproject
-
-
-# Step 3: Copy only requirements first (for caching)
-
-COPY OrangeHRMProject/requirements.txt .
-
-# Step 4: Install dependencies
-
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Step 5: Copy rest of the project files
-
-COPY OrangeHRMProject/ .
-
-# Step 6: Exclude virtual environment if it exists
-
-RUN rm -rf .venv
-
-# Step 7: Default command to run tests
-
-CMD ["pytest", "-v", "-s"]
-
-# Optional: To run specific test file or folder, override CMD during run
-
-# Example: docker run my_orangehrm pytest tests/test_login.py
+# Default command to run tests
+CMD ["pytest", "-v", "-s"]
