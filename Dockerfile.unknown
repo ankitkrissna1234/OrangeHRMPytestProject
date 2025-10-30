@@ -10,7 +10,7 @@ FROM python:3.13-slim
 
 # Step 2: Set working directory
 
-WORKDIR /app3
+WORKDIR /OrangeHRMPytestProject
 
 # Step 3: Copy only requirements first (for caching)
 
